@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import CoffeeCard from './CoffeeCard'
+import './CoffeeList'
 
 const coffeeData=[
   {id: 0, photo: "", name: "", type: "cold brew", description: "", isNew: true},
@@ -15,11 +15,7 @@ function App() {
 
   return (
     <div className="site">
-      <div className="coffee-list">
-        {coffeeData.map((coffee) => (
-          <CoffeeCard key={coffee.id} photo={coffee.photo} name={coffee.name} type={coffee.type} description={coffee.description} isNew={coffee.isNew} />
-        ))}
-        </div>
+      <CoffeeList />
     </div>
   )
 }
