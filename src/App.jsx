@@ -16,6 +16,7 @@ function App() {
 
   return (
     <div className="site">
+      <h1>Our Coffees</h1>
       <FilterMenu />
       <CoffeeList  coffeeData={coffeeData} />
     </div>
