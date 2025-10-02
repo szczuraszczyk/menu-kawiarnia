@@ -1,6 +1,7 @@
 import CoffeeCard from "./CoffeeCard";
+import './App';
 
-function CoffeeList() {
+function CoffeeList({coffeeData}) {
     return ((
         <div className="coffee-list">
             {coffeeData.map((coffee => (
