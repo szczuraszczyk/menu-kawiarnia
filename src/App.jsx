@@ -14,6 +14,12 @@ const coffeeData=[
 
 function App() {
 
+  const [count, setCount] = useState(0)
+
+  function allCoffees(){
+    console.log("it works");
+  }
+
   return (
     <div className="site">
       <h1>Our Coffees</h1>
