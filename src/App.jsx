@@ -14,17 +14,17 @@ const coffeeData=[
 
 function App() {
 
-  const [count, setCount] = useState(0)
+  const [currentCoffeeType, setCurrentCoffeeType] = useState("all");
 
-  function allCoffees(){
-    console.log("it works");
+  const handleFilterChange = (selectedFilter) => {
+    setCurrentCoffeeType(selectedFilter);
   }
 
   return (
     <div className="site">
       <h1>Our Coffees</h1>
-      <FilterMenu />
-      <CoffeeList  coffeeData={coffeeData} />
+      <FilterMenu onFilterChange={handleFilterChange}/>
+      <CoffeeList coffeeData={coffeeData} />
     </div>
   )
 }

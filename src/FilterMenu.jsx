@@ -1,13 +1,13 @@
 import allCoffees from "./App";
 
-function FilterMenu(){
+function FilterMenu({onFilterChange}){
 
     return(
         <div className="filter-menu">
-            <button className="button" onClick={allCoffees}>ALL</button>
-            <button className="button">COLD BREW</button>
-            <button className="button">DRIP</button>
-            <button className="button">ESPRESSO</button>
+            <button className="button" onClick={()=> onFilterChange("all")}>ALL</button>
+            <button className="button" onClick={()=> onFilterChange("cold brew")}>COLD BREW</button>
+            <button className="button" onClick={()=> onFilterChange("drip")}>DRIP</button>
+            <button className="button" onClick={()=> onFilterChange("espressol")}>ESPRESSO</button>
         </div>
     )
 }
