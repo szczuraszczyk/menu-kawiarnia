@@ -20,11 +20,17 @@ function App() {
     setCurrentCoffeeType(selectedFilter);
   }
 
+  function prepareCoffeeData(){
+    return coffeeData.filter(
+      (coffee) => coffee.type === currentCoffeeType || currentCoffeeType === "all"
+    )
+  }
+
   return (
     <div className="site">
       <h1>Our Coffees</h1>
       <FilterMenu onFilterChange={handleFilterChange}/>
-      <CoffeeList coffeeData={coffeeData} />
+      <CoffeeList coffeeData={prepareCoffeeData()} />
     </div>
   )
 }
