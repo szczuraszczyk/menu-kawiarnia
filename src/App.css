@@ -52,6 +52,10 @@
   position: relative;
 }
 
+button {
+  margin: 6px;
+}
+
 img {
   width: 250px;
   border-radius: 40%;
