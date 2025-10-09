@@ -1,8 +1,14 @@
+
+
 function CoffeeCard({photo, name, type, description, isNew}){
+
+    
 
     return((
         <div className="coffee-card">
-            <p>{isNew}</p>
+            {isNew && (
+                <p className="new"> NEW!</p>
+            )}
             <h3>{name}</h3>
             <img src={photo} alt="podgląd kawy" />
             <h6>coffee's type - {type}</h6>
