@@ -8,6 +8,7 @@ function FilterMenu({onFilterChange}){
             <button className="button" onClick={()=> onFilterChange("cold brew")}>COLD BREW</button>
             <button className="button" onClick={()=> onFilterChange("latte")}>DRIP</button>
             <button className="button" onClick={()=> onFilterChange("cappuccino")}>CAPPUCCINO</button>
+            <button className="button" onClick={()=> onFilterChange("irish")}>IRISH</button>
         </div>
     )
 }
